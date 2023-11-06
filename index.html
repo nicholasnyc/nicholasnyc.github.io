@@ -5,74 +5,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nicholas Craig - Digital Detective</title>
     <style>
-        /* Add your CSS styling here */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #0a0f0d;
-            color: #ffffff;
+        /* Base styles */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        .header {
-            background: linear-gradient(90deg, #0d324d 0%, #7f5a83 100%);
-            padding: 20px;
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a0f0d;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Layout styles */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 50px;
+        }
+
+        .header, .nav, .footer {
             text-align: center;
+            padding: 1rem 0;
         }
+
         .nav {
-            display: flex;
-            justify-content: space-around;
             background: #121212;
-            padding: 10px;
+            margin-bottom: 30px;
         }
+
         .nav a {
             color: #11d7a0;
             text-decoration: none;
+            margin: 0 15px;
             font-weight: bold;
         }
-        .intro {
-            padding: 50px;
-            text-align: center;
+
+        .nav a:hover {
+            color: #ffffff;
         }
+
+        .intro, .services, .footer {
+            padding: 2rem;
+        }
+
+        /* Grid Layout for services */
         .services {
-            display: flex;
-            justify-content: space-around;
-            padding: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
         }
+
         .service-item {
-            width: 30%;
-            padding: 20px;
             background: #222;
+            padding: 1.5rem;
             border: 1px solid #333;
         }
-        .footer {
-            background: #121212;
-            padding: 20px;
-            text-align: center;
-            color: #666;
+
+        /* Responsive Typography */
+        h1, h2, h3 {
+            margin-bottom: 0.5rem;
         }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        /* Media queries for responsive design */
+        @media (max-width: 768px) {
+            .nav, .intro, .services, .footer {
+                padding: 1rem;
+            }
+
+            .container {
+                padding: 0 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .header {
+                padding: 0.5rem 0;
+            }
+        }
+
+        /* Transitions */
+        a {
+            transition: color 0.3s ease-in-out;
+        }
+
+        /* Hover Effects */
+        .service-item:hover {
+            background: #333;
+        }
+
+        /* Additional Styling as needed for slick look */
+        /* Add futuristic fonts, neon effects, and more as required */
     </style>
 </head>
 <body>
 
-    <header class="header">
+    <header class="header container">
         <h1>Nicholas Craig</h1>
         <p>Digital Detective & Fraud Investigator</p>
         <!-- Image suggestion: A futuristic city skyline at dusk, where the buildings silhouette against a dark blue sky. Neon signs flicker, and a hologram of a magnifying glass overlaid with a digital grid hovers above the skyline. -->
     </header>
 
-    <nav class="nav">
+    <nav class="nav container">
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <section class="intro">
+    <section class="intro container">
         <h2>Welcome to the Future of Fraud Investigation</h2>
         <p>Unraveling deception in the digital age with cutting-edge technology and investigative expertise.</p>
         <!-- Image suggestion: The shadowy figure of Nicholas Craig analyzing holographic data screens, with streams of data flowing from his fingertips. -->
     </section>
 
-    <section class="services" id="services">
+    <section class="services container" id="services">
         <div class="service-item">
             <h3>Cyber Fraud Analysis</h3>
             <p>Expert analysis of digital trails to uncover fraudulent activities across the cyberspace.</p>
@@ -90,7 +152,7 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer container">
         <p>&copy; 2023 Nicholas Craig. All rights reserved.</p>
         <!-- Image suggestion: A neon sign of the logo "Nicholas Craig - Digital Detective" with a dark background. -->
     </footer>
